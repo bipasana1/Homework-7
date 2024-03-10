@@ -1,0 +1,7 @@
+2. What are some examples of how PHP and JavaScript are alike and how they differ?
+Both PHP and JavaScript are interpreted scripting languages, meaning they are executed line-by-line by an interpreter rather than being compiled into machine code.
+One of the primary differences between PHP and JavaScript is their typical usage context. PHP is primarily used for server-side scripting, meaning it executes on the server to generate dynamic web pages before being sent to the client's browser. On the other hand, JavaScript is primarily used for client-side scripting, meaning it executes in the client's browser after the web page has been delivered.
+
+3. Define MVC, what are the responsibilities of each piece?
+MVC (Model-View-Controller) divides an application into three components: the Model (manages data and logic), the View (displays the user interface), and the Controller (handles user input and updates Model or View). 
+This separation helps organize code and improve maintainability in software development.
