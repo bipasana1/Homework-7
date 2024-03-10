@@ -16,16 +16,21 @@ class MainController extends Controller
 
         echo $template->render($homepageData);
     }
-
     public function notFound() {
-        //todo create a 404 twig template in app/public/assets/views
-        //an example is in app/controllers/UsersController
-        //and return it from this method
-        $template = $this->twig->load('404/error404.twig');
-        $ErrorData = [
-            'title' => '404 Not Found',
-        ];
-
-        echo $template->render($ErrorData);
+        try {
+            // Load the 404 error template
+            $template = $this->twig->load('404.twig');
+            $errorData = [
+                'title' => '404 Not Found',
+            ];
+    
+            // Render the template
+            echo $template->render($errorData);
+        } catch (\Exception $e) {
+            // Handle any exceptions that occur during template rendering
+            echo "Error rendering 404 template: " . $e->getMessage();
+        }
     }
+    
+    
 }
