@@ -33,14 +33,37 @@ class MainController extends Controller
             // Return a generic error message
             echo "An error occurred while processing your request. Please try again later.";
         }
-    } */
+    } 
     
     public function notFound() 
     {
-        $template = $this->twig->load('notFound/notFound.twig');
+        $template = $this->twig->('notFound/notFound.twig');
         http_response_code(404);
         echo $template->render(); 
 
-    }   
+    } */
+    public function notFound() {
+        // Ensure that Twig is properly initialized
+        if ($this->twig) {
+            // Load the 404 error template
+            $template = $this->twig->load('notFound/notFound.twig');
+            
+            // Check if the template was loaded successfully
+            if ($template) {
+                // Set the HTTP response code to 404
+                http_response_code(404);
+                
+                // Render the template
+                echo $template->render();
+            } else {
+                // If the template could not be loaded, echo an error message
+                echo "Error: 404 template not found";
+            }
+        } else {
+            // If Twig is not initialized, echo an error message
+            echo "Error: Twig environment not initialized";
+        }
+    }
+      
     
 }
