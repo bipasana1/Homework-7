@@ -37,3 +37,4 @@ switch ($url) {
         $mainController->notFound();
         break;
 }
+?>
