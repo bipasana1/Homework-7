@@ -8,12 +8,13 @@
 
         <div>
             <h3>users</h3>
-            {% for key, value in posts %}
+        {% for key, value in posts %}
                 id : {{ value.id }}
-                title : {{va;ue.title}}
+                title : {{va;ue.title}} {# Typo here, should be value.title #}
                 views : {{ value.views }}
                 <br>
-            {% endfor %}
+        {% endfor %}
+
         </div>
 
 
