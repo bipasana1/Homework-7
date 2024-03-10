@@ -22,11 +22,10 @@ class MainController extends Controller
         //an example is in app/controllers/UsersController
         //and return it from this method
         $template = $this->twig->load('404/error404.twig');
-        $ErrorData = [ 
-            'title' => '404 not Found'
+        $ErrorData = [
+            'title' => '404 Not Found',
         ];
-        
+
         echo $template->render($ErrorData);
     }
-
 }
