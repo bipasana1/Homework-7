@@ -19,11 +19,14 @@ $mainController = new MainController();
 $userController = new UserController();
 $postController = new PostController();
 
-// Router
 switch ($url) {
     case "/posts":
         // Call the method to return an array of posts via the post controller
         $postController->showPosts();
+        break;
+    case "/users":
+        // Return the index view from the user controller
+        $userController->index();
         break;
     case "/":
         // Return the homepage view from the main controller
