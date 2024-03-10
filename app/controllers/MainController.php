@@ -17,17 +17,13 @@ class MainController extends Controller
         echo $template->render($homepageData);
     }
     public function notFound() {
-        try {
-            // Load the 404 error template
-            $template = $this->twig->load('404.twig');
-            $errorData = [
-                'title' => '404 Not Found',
-            ];
+        $template = $this->twig->load('404.twig');
+        $data = [
+            'title' => '404 Not Found',
+            'message' => 'Sorry, the page you are looking for could not be found.'
+        ];
     
-            // Render the template
-            echo $template->render($errorData);
-        } 
+        echo $template->render($data);
     }
-    
     
 }
