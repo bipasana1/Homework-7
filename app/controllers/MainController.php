@@ -28,7 +28,7 @@ class MainController extends Controller
             echo $template->render($errorData);
         } catch (\Exception $e) {
             // Handle any exceptions that occur during template rendering
-            echo "Error rendering 404 template: " . $e->getMessage();
+            echo "Error rendering 404 template: ";
         }
     }
     
