@@ -27,7 +27,7 @@
 </head>
     <body>
         <form id="form-id" action="" method="POST">
-            <label for="Username">Name:</label>
+            <label for="Username">Enter your username:</label>
             <br>
             <input type="text" id="username-input" name="username">
             <br><br>

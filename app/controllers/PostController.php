@@ -67,9 +67,7 @@ class PostController extends Controller
             'title' => $title,
             'description' => $description,
         ];
-        echo "<span class='form-success'>Post shared successfully!</span>";
-        //echo("<br>"); 
-        //echo json_encode($returnData);
+        echo "<span class='form-success'>Post has been shared successfully!</span>";
         exit();
     }
 }
