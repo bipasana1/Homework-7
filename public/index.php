@@ -10,31 +10,23 @@ use app\controllers\MainController;
 use app\controllers\UserController;
 use app\controllers\PostController;
 
+$uri = $_SERVER["REQUEST_URI"];
+$method = $_SERVER["REQUEST_METHOD"];
 
-$url = $_SERVER["REQUEST_URI"];
+if($uri === "/posts" and $method === "GET"):
+    $postController = new PostController(); 
+    $posts = $postController->submitPosts();
 
+elseif($uri === "/posts" and $method === "POST"):
+    $postController = new PostController(); 
+    $posts = $postController->validatePost();
 
-// Instantiate controllers
-$mainController = new MainController();
-$userController = new UserController();
-$postController = new PostController();
+elseif ($uri === "/"):
+        $mainController = new MainController(); 
+        $mainController->homePage(); 
 
-switch ($url) {
-    case "/posts":
-        // Call the method to return an array of posts via the post controller
-        $postController->showPosts();
-        break;
-    case "/users":
-        // Return the index view from the user controller
-        $userController->index();
-        break;
-    case "/":
-        // Return the homepage view from the main controller
-        $mainController->homepage();
-        break;
-    default:
-        // Return a 404 view from the main controller
-        $mainController->notFound();
-        break;
-}
-?>
+else: 
+        $mainController = new MainController(); 
+        $mainController->notFound();  
+        
+endif; 
