@@ -27,9 +27,13 @@
 </head>
     <body>
         <form id="form-id" action="" method="POST">
-            <label for="Username">Enter your username:</label>
+            <label for="Username">Username:</label>
             <br>
             <input type="text" id="username-input" name="username">
+            <br><br>
+            <label for="Title">Post Title:</label>
+            <br>
+            <input  type="text" id="title-input" name="title">
             <br><br>
             <label for="Description">Description:</label>
             <br>
