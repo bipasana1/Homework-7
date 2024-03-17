@@ -1,0 +1,30 @@
+1. What does it mean to escape data? How does escaping data help us avoid malicious
+code?
+    Escaping data refers to the practice of encoding or modifying data in such a way that it cannot be interpreted as executable code.
+    Escaping data helps prevent malicious code injection, such as XSS attacks. Without proper escaping, attackers can input harmful code 
+    into forms or URLs, which, when executed by a web application, can lead to various security vulnerabilities.
+
+2. Please read through: https://www.codecademy.com/article/what-is-rest
+a. What is REST? What is meant by Statelessness?
+    REST is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other.
+    Statelessness means that the server does not need to know anything about what state the client is in and vice versa. In this way, both the server and the client can understand any message received, even without seeing previous messages. 
+
+b. What is a resource?
+    Resources are the nouns of the web that enforce statelessness. Resources describe any object, document, or thing that you may need to store or send to other services.
+
+c. Look at the section on Path design: In a RESTful architecture paradigm what
+would be the proper way to create a path for: (provide URL and HTTP method):
+       i.   getting a list of users?
+            GET http://fashionboutique.com/customers
+       ii.  getting a particular user?
+            GET http://fashionboutique.com/customers/456
+       iii. saving a user? 
+            POST http://fashionboutique.com/customers
+
+3. What is a Cookie?
+    A cookie is information that a website puts on a user's computer. 
+    Cookies store limited information from a web browser session on a given website that can then be retrieved in the future.
+
+4. What is a Session?
+    A session is a group of user interactions with your website that take place within a given time frame. 
+    For example a single session can contain multiple page views, events, social interactions, and ecommerce transactions.
