@@ -13,46 +13,20 @@ use app\controllers\PostController;
 $uri = $_SERVER["REQUEST_URI"];
 $method = $_SERVER["REQUEST_METHOD"];
 
-// if($uri === "/posts" and $method === "GET"):
-//     $postController = new PostController(); 
-//     $posts = $postController->submitPosts();
-
-// elseif($uri === "/posts" and $method === "POST"):
-//     $postController = new PostController(); 
-//     $posts = $postController->validatePost();
-
-// elseif ($uri === "/"):
-//         $mainController = new MainController(); 
-//         $mainController->homePage(); 
-
-// else: 
-//         $mainController = new MainController(); 
-//         $mainController->notFound();  
-        
-// endif;
-
-if($uri === "/posts" and $method === "GET")
-{
-        $postController = new PostController(); 
+if($uri === "/posts" and $method === "GET"):
+    $postController = new PostController(); 
     $posts = $postController->submitPosts();
 
-}
-
-elseif($uri === "/posts" and $method === "POST"){
-        $postController = new PostController(); 
+elseif($uri === "/posts" and $method === "POST"):
+    $postController = new PostController(); 
     $posts = $postController->validatePost();
-}
 
-
-else{
-    if ($uri === "/"){
+elseif ($uri === "/"):
         $mainController = new MainController(); 
         $mainController->homePage(); 
-    }
 
-else{
-            $mainController = new MainController(); 
+else: 
+        $mainController = new MainController(); 
         $mainController->notFound();  
-}
-
-}
+        
+endif;
